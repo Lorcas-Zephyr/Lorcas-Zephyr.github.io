@@ -3191,11 +3191,6 @@ body {
   line-height: 2;
   -webkit-tap-highlight-color: transparent;
   margin: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-user-select: none;
 }
 * {
   -webkit-box-sizing: border-box;
