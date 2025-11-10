@@ -4,27 +4,6 @@
   
     
     <entry>
-      <title>2025ICPC台湾网络赛VP游记</title>
-      <link href="/2025/11/02/2025ICPC%E5%8F%B0%E6%B9%BE%E7%BD%91%E7%BB%9C%E8%B5%9BVP%E6%B8%B8%E8%AE%B0/"/>
-      <url>/2025/11/02/2025ICPC%E5%8F%B0%E6%B9%BE%E7%BD%91%E7%BB%9C%E8%B5%9BVP%E6%B8%B8%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言">前言</h2><p>昨天(11月1号)开完第一次大会，今天凌晨就很草率的组好了我们的队伍<code>Terra</code>，因为是三个舟批（目移），然后今天晚上就组织了我们团队的第一次训练赛，基地拉的是今年的台湾网络赛的<span class="math inline"><em>v</em><em>p</em></span>，晚上6点到9点。</p><h2 id="正赛">正赛</h2><p>因为没有过 <spanclass="math inline"><em>A</em><em>C</em><em>M</em></span>的经验，我们很朴素的从 <span class="math inline"><em>A</em></span>题开始开，<span class="math inline"><em>A</em><em>B</em></span>都是签到题，然后看 <span class="math inline"><em>C</em></span>，没看懂题目，跳过看了 <span class="math inline"><em>D</em></span>。</p><p>这个时候已经过去将近十分钟了，于是我开始分屏写 <spanclass="math inline"><em>A</em><em>B</em></span>，奇点开 <spanclass="math inline"><em>C</em></span> , <spanclass="math inline"><em>A</em></span> 很顺利的一发通过， <spanclass="math inline"><em>B</em></span>是一个素数筛然后判断一下就好了，结果 <spanclass="math inline"><em>T</em></span> 了，由于 <spanclass="math inline"><em>C</em><em>F</em></span>评测特别慢，看到的时候已经是四十多分钟了，结果发现是数组开的不够大导致在预处理素数的数组的时候越界了，至于为什么是<span class="math inline"><em>T</em></span> 而不是 <spanclass="math inline"><em>R</em><em>E</em></span> ，我也不是很清楚。</p><p>当时奇点没有看懂 <span class="math inline"><em>C</em></span>，青月开了 <span class="math inline"><em>D</em></span>，在打代码，于是我就去看了 <spanclass="math inline"><em>C</em></span>，一对题意发现奇点理解错了，我也把样例推出来了但是没有思路，正着模拟<span class="math inline"><em>O</em>(<em>n</em><sup>2</sup>)</span> ，会<span class="math inline"><em>T</em></span>。</p><p>四十分钟的时候，青月写完 <spanclass="math inline"><em>D</em></span>，交上去等评测。</p><p>这个时候刚好发现 <span class="math inline"><em>B</em></span>题错了，于是快速修改了一下，然后就看到了 <spanclass="math inline"><em>D</em></span>也错了，经过奇点与青月的讨论认为不能简单的枚举判断，应该是一个 <spanclass="math inline"><em>d</em><em>p</em></span> ，并且推到出了正确的<span class="math inline"><em>D</em><em>P</em></span>式，但是交上去在第二个点错了。</p><p>在她写 <span class="math inline"><em>D</em><em>P</em></span>的时候，我发现了 <span class="math inline"><em>C</em></span>可以从后往前做，然后加上判断，就可以做到 <spanclass="math inline"><em>O</em>(<em>n</em>)</span>的时间复杂度，在一旁验证了正确性之后看到她错了立刻换人上机。</p><p>然后思路过于抽象把我自己也绕晕了，第二个样例直接没过，经过了长达一个小时的调试终于确认的代码的正确性，交上去发现<span class="math inline"><em>T</em></span>了，捋了一下代码，在超时了三次之后，终于发现在极端条件下会跑到 <spanclass="math inline"><em>O</em>(<em>n</em><sup>2</sup>)</span> ，<spanclass="math inline"><em>n</em> ∈ (1，2<em>e</em>5)</span>，经过我和队友的一段分析，我突然意识到了在存边的时候前后两条边的关系于是将每次换边的时候的复杂度降到了<span class="math inline"><em>O</em>(1)</span> ，整个代码就是 <spanclass="math inline"><em>O</em>(<em>n</em>)</span> 的了，顺利通过。</p><p>已经是两个小时了，只过了 <spanclass="math inline"><em>A</em><em>B</em><em>C</em></span>三道题，看榜排在铜牌线的位置。</p><p>在我打 <span class="math inline"><em>C</em></span> 的时候，看到 <spanclass="math inline"><em>L</em></span> 过的人比较多，于是奇点开 <spanclass="math inline"><em>L</em></span>，青月也去看<spanclass="math inline"><em>L</em></span>，两人兴奋的说非常简单并且开始推导，然而还没等我调完代码，他们就改变了他们的看法，但也推导出了正确的式子只是代码会很繁琐。</p><p><span class="math inline"><em>C</em></span> 过了之后青月打 <spanclass="math inline"><em>L</em></span>，四十分钟一直在第二个点错，改到最后甚至样例没过去，遗憾只拿了 <spanclass="math inline"><em>A</em><em>B</em><em>C</em></span> 三道题。</p><p>最后看分数线，比铜牌线前10名左右，如果能正确写出 <spanclass="math inline"><em>D</em><em>L</em></span> ，就是银牌。</p><h2 id="复盘">复盘</h2><p>直接看题解，然后发现两道题的式子和题解一模一样，非常困惑的调代码但是因为没有<span class="math inline"><em>s</em><em>t</em><em>d</em></span> ，也没有数据，一直到回寝都没有改出来。</p><ul><li>开题开的手忙脚乱。</li><li>对英文题的读题能力较差，理解题意需要花费大量时间。</li><li>对数组或数据大小的判断力较差，容易开小多一次罚时。</li><li>调试能力不足，无法快速有效的查出bug。</li><li>不过也体现出青月的推导能力非常的强（Orz）</li></ul><p>希望下一次训练赛能过4道题以上叭</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> ACM </tag>
-            
-            <tag> Codeforces </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>新行动分队编制确认</title>
       <link href="/2025/11/02/%E6%96%B0%E8%A1%8C%E5%8A%A8%E5%88%86%E9%98%9F%E7%BC%96%E5%88%B6%E7%A1%AE%E8%AE%A4/"/>
       <url>/2025/11/02/%E6%96%B0%E8%A1%8C%E5%8A%A8%E5%88%86%E9%98%9F%E7%BC%96%E5%88%B6%E7%A1%AE%E8%AE%A4/</url>
