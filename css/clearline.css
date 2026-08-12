@@ -539,6 +539,16 @@ a {
   -webkit-line-clamp: 2;
 }
 
+.post-row-excerpt code {
+  padding: 1px 4px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--blue-soft);
+  color: var(--blue-strong);
+  font-family: "JetBrains Mono", "Cascadia Code", monospace;
+  font-size: 0.9em;
+}
+
 .post-row-foot {
   margin-top: 16px;
   color: var(--blue);
